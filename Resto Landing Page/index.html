@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provo Headlight Restoration</title>
+    <style>
+        /* --- CSS VARIABLES (Easy to change colors here) --- */
+        :root {
+            --primary: #2563eb;       /* Bright Blue */
+            --dark: #1e293b;          /* Dark Slate */
+            --light: #f8fafc;         /* Off-white */
+            --white: #ffffff;
+            --text-main: #334155;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- GLOBAL RESET --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: var(--text-main); background: var(--light); }
+        img { max-width: 100%; display: block; }
+        section { padding: 3rem 1rem; max-width: 800px; margin: 0 auto; }
+
+        /* --- HEADER & HERO --- */
+        header { background: var(--white); padding: 1rem; text-align: center; box-shadow: var(--shadow); position: sticky; top: 0; z-index: 100; }
+        h1 { font-size: 1.5rem; color: var(--dark); font-weight: 800; }
+        
+        .hero { text-align: center; padding: 4rem 1rem; }
+        .hero h2 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 1rem; color: var(--dark); }
+        .hero p { font-size: 1.125rem; margin-bottom: 2rem; color: #64748b; }
+        .btn { display: inline-block; background: var(--primary); color: var(--white); padding: 0.75rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4); transition: transform 0.2s; }
+        .btn:active { transform: scale(0.98); }
+
+        /* --- SWIPEABLE GALLERY (CSS ONLY) --- */
+        .gallery-container { overflow-x: auto; display: flex; gap: 1rem; scroll-snap-type: x mandatory; padding-bottom: 1rem; -webkit-overflow-scrolling: touch; }
+        .card { min-width: 85%; scroll-snap-align: center; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid #e2e8f0; }
+        
+        /* Label for "Before/After" */
+        .image-wrapper { position: relative; height: 300px; background: #ddd; }
+        .image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        .label { position: absolute; top: 10px; left: 10px; background: rgba(0,0,0,0.7); color: white; padding: 4px 8px; font-size: 0.8rem; border-radius: 4px; }
+        .card-body { padding: 1rem; }
+        .card-title { font-weight: bold; margin-bottom: 0.5rem; color: var(--dark); }
+
+        /* --- BOOKING SECTION --- */
+        .booking { background: var(--white); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow); text-align: center; }
+        .calendar-placeholder { background: #f1f5f9; border: 2px dashed #cbd5e1; border-radius: 8px; height: 500px; display: flex; align-items: center; justify-content: center; margin-top: 1rem; overflow: hidden; }
+        
+        /* --- FAQ SECTION --- */
+        details { background: var(--white); margin-bottom: 0.5rem; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        summary { padding: 1rem; cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::-webkit-details-marker { display: none; } /* Hide default triangle */
+        summary::after { content: "+"; font-size: 1.5rem; color: var(--primary); }
+        details[open] summary::after { content: "-"; }
+        .faq-content { padding: 0 1rem 1rem 1rem; color: #475569; font-size: 0.95rem; }
+
+        /* --- FOOTER --- */
+        footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #94a3b8; border-top: 1px solid #e2e8f0; margin-top: 2rem; }
+
+        /* Desktop Adjustments */
+        @media (min-width: 768px) {
+            .card { min-width: 45%; } /* Show 2 cards on desktop */
+            .hero h2 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>✨ Riley's Headlight Restoration</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Drive Brighter.<br>Drive Safer.</h2>
+        <p>Professional headlight restoration in Provo & Utah County. We remove oxidation and yellowing on headlights in under an hour.</p>
+        <a href="#book" class="btn">Book Appointment</a>
+    </section>
+
+    <section id="results">
+        <h3 style="margin-bottom: 1rem; text-align: center;">Recent Transformations</h3>
+        <p style="text-align: center; margin-bottom: 1.5rem; font-size: 0.9rem; opacity: 0.7;">(Swipe to see more)</p>
+        
+        <div class="gallery-container">
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="images/8.png" alt="Headlight Restoration 1">
+                    <span class="label">Before & After</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">2017 Toyota Tacoma</div>
+                    <p>Old, decaying clear coat removed. New UV protection applied.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="images/6.png" alt="Headlight Restoration 2">
+                    <span class="label">Before & After</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">2013 Subaru Outback</div>
+                    <p>Restored clarity for night driving safety.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="images/5.png" alt="Headlight Restoration 3">
+                    <span class="label">Before & After</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">2010 Toyota Highlander</div>
+                    <p>Years of sun damage erased in 45 mins.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src="images/7.png" alt="Headlight Restoration 3">
+                    <span class="label">Before & After</span>
+                </div>
+                <div class="card-body">
+                    <div class="card-title">2015 Hyundai Santa Fe</div>
+                    <p>Years of sun damage erased in 45 mins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--
+    <section id="book">
+        <div class="booking">
+            <h3>Ready for Clear Headlights?</h3>
+            <p>Select a time below that works for you.</p>
+            
+            <div class="calendar-placeholder">
+                <p style="color: #94a3b8;"> 
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0qMYHO8SA1308d3CvcrO0pg3nin2YZiS8qhvjhP5riUHjl-dwEwWFGKaS3UnUjH-hQcGL_FvBf?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+</p>
+            </div>
+        </div>
+    </section> -->
+    <section id="book">
+        <div class="booking-container">
+            <h3 style = "text-align: center">Ready for Clear Headlights?</h3>
+            <p style = "text-align: center">Select a time below that works for you.</p>
+            <!--<h3 style="margin-bottom:1rem;">Schedule Your Restoration</h3> -->
+            
+            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0qMYHO8SA1308d3CvcrO0pg3nin2YZiS8qhvjhP5riUHjl-dwEwWFGKaS3UnUjH-hQcGL_FvBf?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+            </div>
+    </section>
+
+    <section id="faq">
+        <h3 style="margin-bottom: 1.5rem; text-align: center;">Frequently Asked Questions</h3>
+        
+        <details>
+            <summary>Why do headlights get yellow, cloudy, or dim?</summary>
+            <div class="faq-content">
+                UV from sunlight breaks down the outer coating and plastic surface which oxidizes the light cover and turns it yellow. Tiny impacts from rocks will also slowly erode the plastic casing and cause the light to not travel in straight lines giving it a cloudy appearance.
+            </div>
+        </details>
+
+        <details>
+            <summary>What does the process look like?</summary>
+            <div class="faq-content">
+                You book an appointment with us through email, the calendar, or phone number then we’ll meet you at your house or where you want to meet. It’ll take no more than an hour to get your headlights looking brand new.
+            </div>
+        </details>
+
+        <details>
+            <summary>How long does the restoration take?</summary>
+            <div class="faq-content">
+                Most appointments take no more than one hour depending on the severity of the oxidation.
+            </div>
+        </details>
+
+        <details>
+            <summary>Do you come to me?</summary>
+            <div class="faq-content">
+                Yes! We are a mobile service. We can restore your headlights at your home or workplace anywhere in Utah County.
+            </div>
+        </details>
+
+         <details>
+            <summary>Will it damage my car?</summary>
+            <div class="faq-content">
+                Nope! The only thing I work on is the headlight covers. I also use tape to protect the paint right around the light.
+            </div>
+        </details>
+
+        <details>
+            <summary>How long will the clarity last?</summary>
+            <div class="faq-content">
+                We apply a high-grade ceramic UV sealant that typically protects the lenses for years, depending on how often the car is parked in direct sun. For reference, I did my car last September and the lights are still clear and bright.
+            </div>
+        </details>
+
+        <details>
+            <summary>What payments do you accept?</summary>
+            <div class="faq-content">
+                Cash and Venmo are both acceptable.
+            </div>
+        </details>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Riley's Headlight Restorations. Serving Utah County.</p>
+    </footer>
+
+</body>
+</html>
