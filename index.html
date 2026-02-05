@@ -63,6 +63,71 @@
             .card { min-width: 45%; } /* Show 2 cards on desktop */
             .hero h2 { font-size: 3.5rem; }
         }
+        /* --- OFFER & PRICING SECTION --- */
+.offer-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 3rem 1.5rem; /* Extra padding for emphasis */
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15); /* Slightly stronger shadow */
+    border: 2px solid var(--primary); /* Blue border to highlight the deal */
+    position: relative;
+    overflow: hidden;
+}
+
+.discount-tag {
+    background: #ef4444; /* Bright Red */
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: var(--radius);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.old-price {
+    font-size: 1.5rem;
+    color: #94a3b8; /* Light gray */
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.new-price {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1;
+}
+
+.venmo-btn {
+    background: #008CFF; /* Official Venmo Blue */
+    color: white;
+    width: 100%; /* Full width on mobile for easy tapping */
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+.guarantee-box {
+    background: #f0f9ff; /* Very light blue background */
+    border: 1px solid #bae6fd;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #475569;
+    margin-top: 1rem;
+}
     </style>
 </head>
 <body>
@@ -72,8 +137,8 @@
     </header>
 
     <section class="hero">
-        <h2>Drive Brighter.<br>Drive Safer.</h2>
-        <p>Professional headlight restoration in Provo & Utah County. We remove oxidation and yellowing on headlights in under an hour.</p>
+        <h2>Look Brand New<br>For a Fraction of the Cost</h2>
+        <p>Professional headlight restoration in Utah County. We remove oxidation and yellowing on headlights in under an hour.</p>
         <a href="#book" class="btn">Book Appointment</a>
     </section>
 
@@ -122,10 +187,33 @@
                 </div>
                 <div class="card-body">
                     <div class="card-title">2015 Hyundai Santa Fe</div>
-                    <p>Years of sun damage erased in 45 mins.</p>
+                    <p>Quick litte freshen up for more visibility.</p>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="pricing">
+    <div class="offer-card">
+        <div class="discount-tag">$30 OFF</div>
+
+        <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Spring Special</h3>
+        <p style="color: #64748b;">Complete Headlight Restoration (Pair)</p>
+
+        <div class="price-wrapper">
+            <span class="old-price">$80</span>
+            <span class="new-price">$50</span>
+        </div>
+
+        <a href="https://venmo.com/u/sarge_riley" class="btn venmo-btn" target="_blank">
+            Pay $50 via Venmo
+        </a>
+
+        <div class="guarantee-box">
+            <p><strong>🛡️ Prepay Satisfaction Guarantee</strong></p>
+            <p style="margin-top: 4px;">Lock in this rate by paying now. If you aren't 100% happy with the results, we refund you on the spot. No questions asked.</p>
+        </div>
+    </div>
     </section>
 <!--
     <section id="book">
@@ -161,37 +249,23 @@
         </details>
 
         <details>
-            <summary>What does the process look like?</summary>
+            <summary>What does the process look like? How long does it take?</summary>
             <div class="faq-content">
-                You book an appointment with us through email, the calendar, or phone number then we’ll meet you at your house or where you want to meet. It’ll take no more than an hour to get your headlights looking brand new.
+                You book an appointment with us through email, the calendar, or phone number then we’ll meet you at your house or where you want to meet. It’ll take no more than an hour to get your headlights looking brand new.            
             </div>
         </details>
 
         <details>
-            <summary>How long does the restoration take?</summary>
+            <summary>How long does the clarity last? Will it damage my car?</summary>
             <div class="faq-content">
-                Most appointments take no more than one hour depending on the severity of the oxidation.
+                The new coat will last for years. And nope! It will NOT damage your car! The only thing we work on is the headlight covers. We also use tape to protect the paint right around the light.
             </div>
         </details>
 
         <details>
-            <summary>Do you come to me?</summary>
+            <summary>What areas do you serve? Will you come to me?</summary>
             <div class="faq-content">
-                Yes! We are a mobile service. We can restore your headlights at your home or workplace anywhere in Utah County.
-            </div>
-        </details>
-
-         <details>
-            <summary>Will it damage my car?</summary>
-            <div class="faq-content">
-                Nope! The only thing I work on is the headlight covers. I also use tape to protect the paint right around the light.
-            </div>
-        </details>
-
-        <details>
-            <summary>How long will the clarity last?</summary>
-            <div class="faq-content">
-                We apply a high-grade ceramic UV sealant that typically protects the lenses for years, depending on how often the car is parked in direct sun. For reference, I did my car last September and the lights are still clear and bright.
+                Yes! We are a mobile service. We can restore your headlights at your home or workplace anywhere in Utah County. We're based in Provo but we’ll travel all the way from Spanish Fork up to Lehi.
             </div>
         </details>
 
@@ -208,5 +282,4 @@
     </footer>
 
 </body>
-
 </html>
